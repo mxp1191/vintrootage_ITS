@@ -34,7 +34,7 @@ data.frame(rownames(asv_tab)) ## want to remove its87,88,112 (blanks in metadata
 asv <- asv_tab[-c(12,33,40,47,52, 68, 86,87,91, 103),] ## these rows correspond to the above samples (and the second order roots from the metadat file
 asv ## looks good; no blank samples
 
-meta <- read.csv("Ph_RootAge_its_metadata.csv", header=T, row.names=1) ### added color to fungal data 3.17.22, make sure to use csv because .txt not necessarily changed
+meta <- read.csv("Ph_RootAge_its_metadata.csv", header=T, row.names=1) ### added color to fungal data 3.17.22
 meta ## need to remove blanks & second order roots
 data.frame(rownames(meta)) ## blanks correspond to same rows as above, 2nd order roots slightly different
 metadat <- meta[-c(12,33,40,47,52, 68, 86,87,91, 103),] ## also removed 21A (1 root vine)
@@ -90,7 +90,7 @@ ancom.asv.var <- subset(ancom.asv.fac, Age.testing.or.variation.testing.%in% c("
 ancom.asv.age.noperc <- ancom.asv.age[,12:1122] ## new ASV
 ancom.age.met <- ancom.asv.age[,1:11] ## new metadata
 
-## removing the residual zero asv's from when age and var datasets were combined
+## removing the residual zero asvs from when age and var datasets were combined
 test <- t(ancom.asv.age.noperc)
 rowSums(test)
 no_zeroes <- test[rowSums(test)>0,] 
