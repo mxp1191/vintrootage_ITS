@@ -304,15 +304,3 @@ res4.2 = out4.2$res
 tab_diff4.2 = res4.2$diff_abn
 as.data.frame(tab_diff4.2)
 count(tab_diff4.2, tab_diff4.2$YoungvsOld == "TRUE") 
-
-## at 50% prevalence
-# Run ancombc function
-out4.3 = ancombc(phyloseq = class_data, formula = "YoungvsOld",
-                 p_adj_method = "holm", zero_cut = 0.50, lib_cut = 0,
-                 group = "YoungvsOld", struc_zero = TRUE, neg_lb = FALSE,
-                 tol = 1e-5, max_iter = 100, conserve = TRUE,
-                 alpha = 0.05, global = FALSE)
-res4.3 = out4.3$res
-tab_diff4.3 = res4.3$diff_abn
-as.data.frame(tab_diff4.3)
-count(tab_diff4.3, tab_diff4.3$YoungvsOld == "TRUE") 
