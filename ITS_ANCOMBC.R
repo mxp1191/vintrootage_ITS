@@ -115,7 +115,7 @@ ancom.ITS.Phylo.age <- phyloseq(ancom.ITS.ASV.age, ancom.ITS.Meta.age,ancom.ITS.
 ancom.ITS.Phylo.age
 
 
-#### phyloseq object of non-normalized data and no zeroes
+#### phyloseq object of non-normalized data and only "age" roots
 nz.ITS.ASV.age <- otu_table(asv.nz, taxa_are_rows=F)
 nz.ITS.Meta.age <- sample_data(meta.nzes,errorIfNULL=TRUE)
 nz.ITS.Taxo.age <- tax_table(as.matrix(no.zero.taxa, errorIfNULL=TRUE))
