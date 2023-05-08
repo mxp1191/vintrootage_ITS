@@ -213,7 +213,7 @@ track
 
 #### ASSIGN TAXONOMY #### 
 
-# Make sure to include PATH info for Silva database
+# Make sure to include PATH info for UNITE database
 unite<- ("/storage/work/mxp1191/Rootage_ITS/sh_general_release_dynamic_04.02.2020.fasta")
 set.seed(100)
 taxa <- assignTaxonomy(seqtab.nochim, unite, multithread=TRUE)
